@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/lab.css" rel="stylesheet">
+    <title>Lab</title>
+</head>
+<body>
+    <script>
+
+        function op_fun(){
+            var num1 = parseInt(document.getElementById("number1").value);
+            var num2 = parseInt(document.getElementById("number2").value);
+            var op = parseInt(document.getElementById("get_operator").value);
+            var result;
+            if(op==1){
+                result=num1+num2;
+            }else if(op==2){
+                result=num1-num2;
+            }else if(op==3){
+                result=num1*num2;
+            }else if(op==4){
+                result=num1/num2;
+            }
+            document.getElementById("result_num").innerHTML = "Result = "+result;
+        }
+    
+    </script>
+    <div id="cal">
+        <h2> JS Calculator </h2>
+        <p> Number 1 </p>
+        <input id="number1" type="number"/>
+        <p> Number 2 </p>
+        <input id="number2" type="number"/>
+        <p> Operate way? </p>
+        <select id="get_operator">
+            <option value="1" selected="selected">+</option>
+            <option value="2">-</option>
+            <option value="3">*</option>
+            <option value="4">/</option>
+        </select>
+        <div>
+            <button id="op_btn" onclick="op_fun()">Add</button>
+        </div>
+        <p id="result_num"></p>
+    </div>
+</body>
+</html>

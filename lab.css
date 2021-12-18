@@ -1,0 +1,30 @@
+#cal{
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+    background-color: rgb(247, 247, 247);
+    border: solid 1px grey;
+    border-radius: 10px;
+    margin:30px auto;
+}
+
+#get_operator{
+    width: 100%;
+}
+
+input{
+    width: 100%;
+}
+
+#op_btn{
+    margin-top: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    background-color: rgb(128, 88, 42);
+    color:white;
+}
+
+#op_btn:hover{
+    background-color: rgb(102, 70, 33);
+}
