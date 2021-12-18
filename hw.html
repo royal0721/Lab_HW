@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/hw.css" rel="stylesheet">
+    <title>HW-Guessing_game</title>
+</head>
+<body>
+    <script>
+        var target_num = Math.floor(Math.random() * 100) + 1;
+        var min=1;
+        var max=100;
+        function play(){
+            var range_block = document.getElementById("range");
+            var input_num = parseInt(document.getElementById("guess_number").value);
+            if(input_num > target_num){
+                var element = document.createElement("div");
+                element.setAttribute("class","details");
+                max = input_num;
+                var t=document.createTextNode(min+"~"+max);
+	            element.appendChild(t);
+                range_block.appendChild(element);
+            }else if(input_num < target_num){
+                var element = document.createElement("div");
+                element.setAttribute("class","details");
+                min = input_num;
+                var t=document.createTextNode(min+"~"+max);
+	            element.appendChild(t);     
+                range_block.appendChild(element);           
+            }else{
+                alert("BOOM!");
+            }
+        }
+    </script>
+    <div id="game_block">
+        <h2>Guessing Game</h2>
+        <p>Your Guess (1 ~ 100)</p>
+            <div>
+                <input id="guess_number" type="number" min='1' max='100'/>
+            </div>
+            <button id="play_btn" onclick="play()">Play</button>
+        <div id="result">
+            <b>Result</b>
+            <div id="range">
+                <div>hello</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
