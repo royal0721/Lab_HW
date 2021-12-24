@@ -16,7 +16,7 @@
             var range_block = document.getElementById("range");
             var input_num = parseInt(document.getElementById("guess_number").value);
             var guess_block = document.getElementById("guess_number");
-            if((input_num > target_num)&&(input_num<max)){
+            if((input_num > target_num)&&(input_num<=max)){
                 guess_block.setAttribute("max", input_num);
                 var element = document.createElement("div");
                 element.setAttribute("class","details");
@@ -24,7 +24,7 @@
                 var t = document.createTextNode(min+"~"+max);
 	            element.appendChild(t);
                 range_block.appendChild(element);
-            }else if((input_num < target_num)&&(input_num>min)){
+            }else if((input_num < target_num)&&(input_num>=min)){
                 guess_block.setAttribute("min", input_num);
                 var element = document.createElement("div");
                 element.setAttribute("class","details");
@@ -49,7 +49,6 @@
         <div id="result">
             <b>Result</b>
             <div id="range">
-                <div>hello</div>
             </div>
         </div>
     </div>
