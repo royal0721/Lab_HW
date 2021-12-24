@@ -1,4 +1,4 @@
-
+    
 input{
     border: solid 1px white; 
     padding:5px;
@@ -41,4 +41,9 @@ border: solid 1px rgb(233, 233, 233);
     background-color: rgb(252, 225, 252);
     padding:20px;
     margin:10px;
+    width:330px;
+}
+td{
+    border:2px white solid;
+    background-color: rgb(250, 250, 250);
 }
