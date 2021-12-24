@@ -16,15 +16,27 @@
             var op = parseInt(document.getElementById("get_operator").value);
             var result;
             if(op==1){
-                result=num1+num2;
+                result= add(num1,num2);
             }else if(op==2){
-                result=num1-num2;
+                result= minus(num1,num2);
             }else if(op==3){
-                result=num1*num2;
+                result= mul(num1,num2);
             }else if(op==4){
-                result=num1/num2;
+                result= div(num1,num2);
             }
             document.getElementById("result_num").innerHTML = "Result = "+result;
+        }
+        function add(num1, num2){
+            return num1 + num2;
+        }
+        function minus(num1, num2){
+            return num1 - num2;
+        }
+        function mul(num1, num2){
+            return num1 * num2;
+        }
+        function div(num1, num2){
+            return num1/num2;
         }
     
     </script>
