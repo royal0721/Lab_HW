@@ -17,12 +17,6 @@
         function play(){
 
             var input_num = parseInt(document.getElementById("guess_number").value);
-            alert(input_num);
-            
-            if(input_num==target_num){
-                alert("BOOM!");
-                location.reload();
-            }
 
             while(input_num != target_num){
 
@@ -52,6 +46,12 @@
                     break;
                 }
             }
+
+            if(input_num==target_num){
+                alert("BOOM!");
+                location.reload();
+            }
+            
             // if((input_num > target_num)&&(input_num<=max)){
             //     guess_block.setAttribute("max", input_num);
             //     var element = document.createElement("div");
